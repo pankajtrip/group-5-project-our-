@@ -1,0 +1,248 @@
+<!-- <link rel="stylesheet" href="/static/style.css">
+
+<div class="header">
+    Teacher Dashboard
+</div>
+
+<div class="big-container">
+
+    <form method="POST">
+
+        <div class="flex">
+
+            <div>
+                <label>Search Name</label>
+                <input name="search">
+            </div>
+
+            <div>
+                <label>From</label>
+                <input type="date" name="from_date">
+            </div>
+
+            <div>
+                <label>To</label>
+                <input type="date" name="to_date">
+            </div>
+
+            <div>
+                <label>Branch</label>
+                <select name="branch">
+<option value="">All</option>
+<option>IT</option>
+<option>Mechanical</option>
+<option>Electrical</option>
+<option>Civil</option>
+</select>
+            </div>
+
+            <button class="topbtn">Filter</button>
+
+        </div>
+
+    </form>
+
+    <a href="/download">
+        <button class="topbtn">Download Excel</button>
+    </a>
+
+    <a href="/report">
+        <button class="topbtn">Monthly Report</button>
+    </a>
+
+    <a href="/dashboard">
+        <button class="topbtn">Refresh</button>
+    </a>
+
+    <a href="/">
+        <button class="topbtn">Home</button>
+    </a>
+
+    <a href="/login">
+        <button class="topbtn">Logout</button>
+    </a>
+
+    <table>
+
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Sem</th>
+            <th>Year</th>
+            <th>Branch</th>
+            <th>Subject</th>
+            <th>Date</th>
+            <th>Time</th>
+        </tr>
+
+        {% for row in data %}
+
+        <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div> -->
+<link rel="stylesheet" href="/static/style.css">
+
+<div class="header">
+
+    Teacher Dashboard
+
+</div>
+
+<div class="big-container">
+
+    <form method="POST">
+
+        <div class="flex">
+
+            <div>
+
+                <label>Search Name</label>
+
+                <input name="search">
+
+            </div>
+
+            <div>
+
+                <label>From Date</label>
+
+                <input type="date" name="from_date">
+
+            </div>
+
+            <div>
+
+                <label>To Date</label>
+
+                <input type="date" name="to_date">
+
+            </div>
+
+            <div>
+
+                <label>Branch</label>
+
+                <select name="branch">
+
+<option value="">All</option>
+
+<option>IT</option>
+
+<option>Mechanical</option>
+
+<option>Electrical</option>
+
+<option>Civil</option>
+
+</select>
+
+            </div>
+
+            <div>
+
+                <button>Filter</button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+    <div class="btn-row">
+
+        <a href="/download">
+
+            <button>Download Excel</button>
+
+        </a>
+
+        <button>
+
+Monthly Report :
+
+{{data|length}}
+
+</button>
+
+        <a href="/dashboard">
+
+            <button>Refresh</button>
+
+        </a>
+
+        <a href="/">
+
+            <button>Home</button>
+
+        </a>
+
+        <a href="/login">
+
+            <button>Logout</button>
+
+        </a>
+
+    </div>
+
+    <table>
+
+        <tr>
+
+            <th>ID</th>
+
+            <th>Name</th>
+
+            <th>Sem</th>
+
+            <th>Year</th>
+
+            <th>Branch</th>
+
+            <th>Subject</th>
+
+            <th>Date</th>
+
+            <th>Time</th>
+
+        </tr>
+
+        {% for row in data %}
+
+        <tr>
+
+            <td>{{row[0]}}</td>
+
+            <td>{{row[1]}}</td>
+
+            <td>{{row[2]}}</td>
+
+            <td>{{row[3]}}</td>
+
+            <td>{{row[4]}}</td>
+
+            <td>{{row[5]}}</td>
+
+            <td>{{row[6]}}</td>
+
+            <td>{{row[7]}}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</div>
